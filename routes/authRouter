@@ -4,9 +4,8 @@ const myDB = require("../db/myAuthDB.js");
 const router = express.Router();
 const myEncrypt = require ('../encrypt/myEncrypt.js');
 
-
 router.get('/', (req, res) => {
-  res.sendFile(path.join('../client/public', "index.html"))
+  res.sendFile('../client/public/index.html');
 })
 
 
