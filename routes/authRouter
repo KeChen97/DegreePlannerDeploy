@@ -3,9 +3,10 @@ const express = require('express');
 const myDB = require("../db/myAuthDB.js");
 const router = express.Router();
 const myEncrypt = require ('../encrypt/myEncrypt.js');
+const path = require('path');
 
 router.get('/', (req, res) => {
-  res.sendFile('../client/public/index.html');
+  res.sendFile(path.join('../client/public', "index.html"))
 })
 
 
